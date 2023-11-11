@@ -1,0 +1,225 @@
+/* <!-- Hecho por Javier Olivar, Cedula: 30.737.648 -->
+<!-- Actividad-FrontEnd-3.1 --> */
+
+@font-face {
+  font-family: "velocidad";
+  src: url("../font/High_Speed.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* MENU COMIENZA */
+
+nav .menu {
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.navbar-brand {
+  text-decoration: none;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+}
+.px-3 {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 20px;
+  text-align: center;
+}
+
+.px-3 .title {
+  color: #fff;
+  font-size: 55px;
+  font-weight: 600;
+}
+
+.px-3 .title,
+.px-3 .sub_title {
+  font-size: calc(1.525rem + 1.8vw);
+}
+
+.px-3,
+.sub_title {
+  color: #fff;
+  font-size: 52px;
+  font-weight: 600;
+  font-family: "velocidad";
+}
+
+.px-3 .btns {
+  margin-top: 20px;
+}
+
+.px-3 .btns button {
+  height: 55px;
+  width: 170px;
+  border-radius: 5px;
+  border: none;
+  margin: 0 10px;
+  border: 2px solid white;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+.px-3 .btns .conoce {
+  color: white;
+  background: none;
+  transition: all 0.5s;
+}
+
+.btns .conoce:hover {
+  box-shadow: inset 5em 0 0 0 #dd7e2a, inset -5em 0 0 0 #dd7e2a;
+  border-color: #dd7e2a;
+  color: #fff;
+}
+
+.px-3 .btns .sub {
+  background: white;
+  color: black;
+}
+
+.cover-container {
+  max-width: 42em;
+}
+
+/* IMAGEN COMIENZA */
+
+.img-servicios {
+  background: url("../imagenes/fondo_carros.jpg") no-repeat;
+}
+
+.img-landing,
+.img-acerca,
+.img-servicios,
+.img-contacto {
+  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 30rem 100rem rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 110vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* IMAGEN TERMINA */
+
+.logo {
+  height: 3.8em;
+  width: 3.8em;
+}
+
+.menu ul {
+  display: inline-flex;
+}
+.menu ul li {
+  list-style: none;
+  margin-left: 7px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #262626;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+.menu ul li a:hover {
+  box-shadow: inset 0 1.5em 0em 0em #530615, inset 0 -1.5em 0em 0em #530615;
+  border-color: #530615;
+  color: #fff;
+}
+
+/* MENU TERMINA */
+
+/* Varios */
+
+.inter-tittle,
+.title_outer,
+.about_us {
+  text-align: left;
+  margin: 35px;
+}
+
+.inter-tittle {
+  color: #262626;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+.title_outer {
+  color: #3d3d3d;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+.about_us {
+  font-weight: 300;
+  font-size: 16px;
+}
+
+/*  Servicios */
+
+.carro_main {
+  width: 100%;
+  float: left;
+  background-color: #fefefe;
+  height: auto;
+  margin-top: 70px;
+}
+
+.round_1 {
+  width: 15%;
+  margin: 0 auto;
+  font-size: 24px;
+  color: #fefefe;
+  height: 60px;
+  background: #e7810d;
+  text-align: center;
+  border-radius: 60px;
+  padding-top: 12px;
+  position: relative;
+  top: -35px;
+}
+
+.aviso_texto {
+  width: 100%;
+  text-align: center;
+  color: #2b3436;
+}
+
+.descripcion_texto {
+  width: 100%;
+  float: left;
+  text-align: center;
+  color: #2b3436;
+  font-size: 20px;
+  margin-left: 0px;
+}
+
+.images_2 {
+  width: 100%;
+  float: left;
+  text-align: center;
+}
+/* Termina Servicios */
+
+/* Termina Contacto*/

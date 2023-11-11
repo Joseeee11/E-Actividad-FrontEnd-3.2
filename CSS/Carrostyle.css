@@ -1,0 +1,87 @@
+@font-face {
+    font-family: "velocidad";
+    src: url("../font/High_Speed.otf");
+}  
+
+body{
+    background: black;
+    font-family: "Poppins", sans-serif;
+}
+
+.volver{
+    display:inline-block;
+    background: #a8030f;
+    color: black;
+    margin: 50px auto;
+    padding: 10px 30px;
+    text-decoration: none;
+}
+
+.volver:hover{
+    background: #a69c94;
+}
+.contenedor{
+    color: #f2f2f2;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.text-centrado{
+    text-align: center;
+}
+
+.columna{
+    background: white;
+    color: #262626;
+    border: 1px solid #262626;
+    margin: 18vh auto;
+    padding: 10px;
+    border-radius: 35px;
+    box-shadow: -7px -7px 10px #530615;
+    width: 45%;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+.precio{
+    font-size: 50px;
+    color: #262626;
+}
+
+.btc-precio{
+    background: #a8030f;
+    display:block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    font-size: large;
+    font-family: "velocidad";
+}
+
+.btc-precio:hover{
+    background: #a69c94;
+}
+
+@media (max-width: 1070px){
+    .columna{
+        width: 45%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 600px){
+    .columna{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+/* Realizado Por Jose Manuel Marquez */

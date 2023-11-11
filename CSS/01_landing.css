@@ -1,0 +1,321 @@
+/*autor(a): Rosimar Barrios  ----  github: rossjbm*/
+/*PALETA DE COLORES: #530615 #A8030F #A69C94 #F2F2F2 #262626*/
+
+/*FLEXBOX: alinear elementos    GRID: realizar estructura*/
+
+/*Fuente descargada*/
+@font-face {
+    font-family: "velocidad";
+    src: url("../font/High_Speed.otf");
+}
+
+* {
+    /*Igual a cero para quitar el margen predeterminado de la página*/
+    margin: 0; /*para todos los lados*/
+
+    /*Fuente para toda la pagina*/
+    font-family: "Poppins", sans-serif; /*FONT-FAMILY: establece la tipografía para el elemneto seleccionado*/
+}
+
+main {
+    /*Fondo para todo el main de la página*/
+    background-color:  #d8d8d8; /*BACGROUND-COLOR: establece un color de fondo*/
+}
+
+/*PRIMERA SECTION. SECCIÓN PRINCIPAL*/
+.fondo_text {
+    /*Dimensiones de .fondo_text*/
+    width: 100%; /*ancho*/
+    height: 100vh; /*largo*/
+
+    /*Fondo imagen de .fondo_text */
+    background-image: linear-gradient(#000000b3, #000000b3), url("../imagenes/landing_page/fondo_01.jpg"); /*BACKGROUND-IMAGE: establece una imagen de fondo para un elemento; */
+    background-position: center; /*BACKGROUND-POSITION: Posicionamiento de la imagen de fondo; CENTER: en el centro*/
+    background-size: cover; /*BACKGROUND-SIZE: especifica el tamaño de las imágenes de fondo; COVER: Escala la imagen al mayor tamaño posible sin estirarla*/
+
+    /*Elementos dentro de .fondo_text*/
+    text-align: center; /*TEXT-ALING: permite establecer la alineación horizontal de un bloque de texto; CENTER: al centro*/
+    color: #F2F2F2; /*color de los caracteres*/
+
+    /*Vista de alineación de elementos*/  /*DISPLAY: establece los tipos de visualización de un elemento tanto externa e interna (sus nodos hijos, su contenido)*/
+    display: flex; /*FLEX: el elemento se comporta como un elemento de bloque, los nodos hijo se convierten en elementos flexibles, es decir se pueden distribuir en dirección vertical u horizontal y sus tamaños son manejables*/
+    flex-direction: column; /*FLEX-DIRECTION: determina la dirección en que se ordenarán los elementos en el espacio; COLUMN: de arriba a abajo*/
+    justify-content: center; /*JUSTIFY-CONTENT: define cómo el navegador distribuye el espacio entre y alrededor de los items flex; CENTER: Alinear items en el centro*/
+}
+
+/*Estilos específicos para los elementos dentro de .fondo_text*/
+.fondo_text p, .fondo_text h3, .fondo_text h1, .fondo_text div {
+    margin: 5vh auto;
+}
+.fondo_text h1 {
+    font-size: 45px; /*FONT-SIZE: establece el tamaño de la fuente(letra)*/
+    font-family: "velocidad";
+    text-shadow: 5px 5px 10px #000; /*TEXT-SHADOW: agrega sombras al texto, sus valores se componen de eje X; eje Y; Desenfoque; color*/
+}
+.fondo_text h3 {
+    font-size: 28px;
+    text-shadow: 5px 5px 10px #000;
+
+}
+.fondo_text p {
+    font-size: 20px;
+}
+
+/*PSEUDO-ELEMENTOS: permiten añadir estilos a una parte concreta del documento*/
+.fondo_text p::before, .fondo_text p::after { /*BEFORE: añade un primer hijo al elemento seleccionado; AFTER: añade un ultimo hijo al elemento seleccionado; AMBOS POR MEDIO de CONTENT""*/
+    content: "↓";
+
+    /*Características para ese añadido*/
+    color: #f2f2f2;
+    font-size: 25px;
+}
+
+/*Botones "Regístrate" e "Iniciar" dentro de .fondo_text*/
+.button_registrate, .button_iniciar {
+    /*Dimensiones*/
+    height: 55px;
+    width: 200px;
+    margin: 20px 70px;
+
+    /*Bordes*/        /*None para quitar el borde predeterminado de los botones*/
+    border: none; /*BORDER: resumen de caracteristicas a los bordes; NONE: ninguno*/
+    border-radius: 15px; /*BORDER-RADIUS: Radio de todos los bordes*/
+    box-shadow: 5px 5px 10px #000; /*BOX-SHADOW: agrega sombras a la caja, sus valores se componen de eje X; eje Y; Desenfoque; color*/
+
+    /*Texto del boton*/
+    font-size: 26px;
+    font-weight: 600; /*FONT-WEIGTH: establece negrita a los caracteres con un determinado peso; VALOR 600: Semi Bold (semi negrita)*/
+    color: #000; /*COLOR: da un valor a los caracteres*/
+
+    /*Transición*/
+    transition: transform .3s;
+}
+.button_registrate {
+    /*Fondo*/
+    background-color: #d0c4b9ee; 
+}
+.button_iniciar {
+    /*Fondo*/
+    background-color: #A8030F;
+}
+
+/*PSEUDO-CLASES     palabra clave agregada a un selector, que permiten definir diferentes estados a los elementos seleccionados*/
+.button_registrate:active { /*ACTIVE: al activar un boton con el click*/
+    border: 2px solid #000;
+    background-color: #d3d3d3;
+    transform: scale(.9); /*TRANSFORM: transforma el elemento; SCALE: transformar tamaño */
+}
+.button_iniciar:active { 
+    border: 2px solid #000;
+    background-color: #ec3542;
+    transform: scale(.9);
+}
+
+
+/* SEGUNDA SECTION. SECCIÓN DE PRESENTACIÓN DE SERVICIO */
+/*Titulo de esa section*/
+h2 {
+    /*Margen*/
+    margin: 120px auto; /*de los lados toma un valor automático*/
+
+    /*Texto*/
+    text-align: center;
+    font-size: 40px;
+    text-shadow: 5px 0px 8px #a8030f82, -5px 0px 8px #A8030F82; /*TEXT-SHADOW: agrega sombras al texto; VALOR: eje X, eje Y, desenfoque, color*/
+}
+.cont {
+    margin: 80px 0;
+
+}
+.cont_servicio {
+    /*Estructura de cont_servicio*/
+    display: grid; /*GRID: basa sus elementos a un diseño de cuadrículas con filas y columnas, permitiendo dividir la página en partes y definir tamaños, posiciones...*/
+    grid-template-columns: 1fr 1fr; /*GRID-TEMPLATES-COLUMNS: define el número de columnas y los tamaños asignados a cada una; VALOR: fr=fracción indica una fracción del espacio disponible en el contenedor de la cuadrícula.*/
+
+    grid-gap: 35px;  /*GRID-GAP: establece los espacios entre las filas o las columnas de la cuadricula*/
+    margin: 70px 30px;
+}
+/*Textos dentro de article en cont_servicio*/
+.text_servicio_izq, .text_servicio_der {
+    /*Elementos dentro de text_servicio*/
+    padding: 10px;   /*PADDING (relleno): separación entre el borde y el contenido; VALOR: para todos los lados*/
+    margin: 0 40px;  /*MARGIN (margen): separación entre borde y la página; VALOR: para arriba_abajo y derecha-izquierda*/
+    text-align: center;
+
+    /*Alinear ;)*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; /*APACE-AROUND: los elementos tienen el mismo espacio a su alrededor*/
+
+    /*Letra*/
+    color: #f2f2f2;
+
+    /*Animación*/
+    animation: fondo_dinamico 5.5s linear infinite;  /*ANIMATION: aplica una animación a los estilos de un determinado elemento; VALOR: nombre, duración de animación, progresión de la animación en cada ciclo (LINEAR: velocidad uniforme), numero de veces que un ciclo de animación debe ser ejecutado (INFINITE: repetición infinita)*/
+}
+.text_servicio_der {
+    /*Radio de los bordes*/
+    border-bottom-left-radius: 50px; /*BORDER-BOTTOM-LEFT-RADIUS: Radio del borde de la esquina inferior izquierda*/
+    border-top-right-radius: 50px; /*BORDER-TOP-RIGHT-RADIUS: Radio del borde de la esquina superior derecha*/
+
+    /*Fondo*/
+    background: linear-gradient( to right top,  #2b1717, #3b0510, #a8030eee, #3b0510,  #2b1717); /*LINEAR-GRADIENT: transición progresiva entre dos o más colores a lo largo de una línea recta*/
+    background-size: 400% 400%; /*Le damos el ancho y largo del tamaño de la imagen fondo*/
+}
+.text_servicio_izq {
+    /*Radio de los bordes*/
+    border-top-left-radius: 50px; /*BORDER-TOP-LEFT-RADIUS: Radio del borde de la esquina superior izquierda*/
+    border-bottom-right-radius: 50px; /*BORDER-BOTTOM-RIGHT-RADIUS: Radio del borde de la esquina inferior derecha*/
+
+    /*Fondo*/
+    background: linear-gradient( to right top,  #2b1717, #3b0510, #a8030eee, #3b0510,  #2b1717);
+    background-size: 400% 400%;
+}
+
+.text_servicio_der, .text_servicio_izq, .img_servicio_der , .img_servicio_izq {
+    /*Transición */
+    transition: transform 1s ease-in-out;  /*TRANSITION: permite definir la transición entre dos estados de un elemento; VALOR: propiedad a la que se le aplica, duración de transición, velocidad de la transición (EASE-IN-OUT: empieza y acaba lentamente, y en la central es rápido)*/
+} 
+
+/*PSEUDO-CLASES*/
+.text_servicio_der:hover, .text_servicio_izq:hover, .img_servicio_der:hover, .img_servicio_izq:hover { /*HOVER: cuando el cursor pasa sobre un elemento*/
+    transform: scale(1.1); 
+}
+
+/*@KEYFRAMES: es una regla de CSS que permite construir animaciones.          ¡¡Recordarme!!: Las reglas Css son las sentencias en las hojas de estilo, hay dos tipos de @ y las comunes*/
+@keyframes fondo_dinamico { /*nombre de la animación*/
+    0% { /*cuando la animación vaya a este porciento (a este tiempo)*/
+        background-position: 0% 50%; /*cambia la posición del fondo*/
+    } 25% {
+        background-position: 50% 50%;
+    } 50% {
+        background-position: 100% 50%;
+    } 75% {
+        background-position: 50% 50%;
+    } 100% {
+        background-position: 0% 50%;
+    }
+}
+
+/*Tamaño de fuentes*/
+.text_servicio_der h3, .text_servicio_izq h3 {
+    font-size: 24px;
+}
+.text_servicio_der p, .text_servicio_izq p {
+    font-size: 18px;
+}
+
+/*Imágenes dentro de cont_servicio*/
+.img_servicio_izq, .img_servicio_der{
+    /*Dimensiones*/
+    height: 200px;
+    width: 400px;
+
+    /*Ajuste de imagen*/
+    object-fit: cover; /*OBJECT-FIT: establece cómo se debe cambiar el tamaño del contenido de un elemento dentro de su contenedor; COVER: llena todo el cuadro de contenido del elemento, se recortará para ajustarse*/
+}
+.img_servicio_der {
+    /*Margen*/
+    margin-right: auto;
+    padding-left: 40px;
+
+    /*Forma de los bordes*/
+    border-top-left-radius: 20%; 
+    border-bottom-right-radius: 50px;
+}
+.img_servicio_izq {
+    /*Margen*/
+    margin-left: auto;
+    padding-right: 40px;
+
+    /*Forma de los bordes*/
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 20%; 
+
+    object-position: top; /*OBJECT-POSOTION: establece la posición del contenido dentro de un elemento; TOP: arriba*/
+}
+
+/*Parrafos de invitación al servicio dentro de cont_servicio*/
+.invita_servicio, .invita_servicio_reg {
+    /*Medidas extra*/
+    margin: 40px 0;
+
+    /*Centrado del texto*/
+    text-align: center;
+
+    /*Tamaño*/
+    font-size: 28px;
+}
+.invita_servicio_reg {
+    /*Tamaño*/
+    font-size: 35px;
+    text-shadow: 5px 0px 8px #a8030f82, -5px 0px 8px #a8030f82;
+
+}
+.invita_servicio_reg a {
+    /*Para quitar la línea decorativa predeterminada de los enlaces*/
+    text-decoration: none; /*TEXT-DECORATION: da estilos a las líneas decorativas en el texto; NONE: ninguno*/
+
+    /*Color del texto*/
+    color: #530615;
+
+    /*Tamaño y Tipografía*/
+    font-family: "velocidad";
+    font-size: 30px;
+}
+
+
+ /* TERCERA PARTE. SECCION DE BASES ORGANIZACIONALES  */
+ .cont_bases {
+    /*Vista de estructura de los elementos dentro de .cont_bases*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    /*espaciado entre elementos*/
+    grid-gap: 35px;
+    margin: 50px 30px 0px 30px; /*VALOR: izquierda, derecha, abajo, arriba*/
+}
+.text_bases {
+    /*Centrado, margen y padding de los textos en cont_bases*/
+    text-align: center;
+    margin: 50px 5px;
+    padding: 15px;
+
+    /*Alinear elementos*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /*SPACE-BETWEEEN: espacio entre los elementos, donde el primero este al inicio y el último al final de la cuadricula*/
+
+    /*Borde*/
+    border: 8px dotted #262626; /*VALOR: tamaño, tipo, color*/
+}
+
+/*PSEUDO-CLASES para text_bases*/
+.text_bases:hover {
+    /* Fondo */
+    background: linear-gradient( to right top, #a69c94, #f2f2f2bb, #f2f2f2bb,  #a69c94);
+}
+
+/*Elementos p, ul, li dentro de text_bases*/
+.text_bases p {
+    /*Tamaño y margen*/
+    font-size: 18px;
+    margin: 20px 0;
+}
+.text_bases h3 {
+    /*Tamaño del texto y tipografía*/
+    font-size: 24px;
+    font-family: "velocidad";
+}
+.text_bases ul {
+    /*Para quitar los estilos predeterminados de las listas*/
+    list-style: none; /*permite configurar todas las propiedades de estilo para lista a la vez; NONE: ninguno*/
+
+    /*Igual a cero para quitar el padding predeterminado de las listas*/
+    padding: 0;
+}
+.text_bases li {
+    /*Tamaño y margen*/
+    font-size: 20px;
+    margin: 14px 0;
+}

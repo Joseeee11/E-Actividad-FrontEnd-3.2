@@ -1,0 +1,202 @@
+/* CSS de inicio de sesión y registro Hecho por Cristian Rangel */
+
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+
+main{
+    padding-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-color: #d8d8d8;
+    
+    
+    /* background-image: url(" https://th.bing.com/th/id/OIG.Fbn1L7z8qx08W_5URqob?pid=ImgGn "); */
+}
+
+.bordeAnimado{
+    margin: 2vh 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    
+    /* Animación */
+    --tiempo-borde: 3s; /*Variable para la duración de la animación*/
+    --angulo-borde: 0turn; /*variable para saber el inicio de la rotación de la animación*/
+    background-image: conic-gradient(from var(--angulo-borde), transparent 20%, #530615,  #A8030F);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    animation: girar-fondo var(--tiempo-borde) linear infinite;
+}
+
+
+
+.bordeAnimado:hover {  /* Esto ralentiza la duración de la animación cambiando el valor de la variable*/
+    --tiempo-borde: 10s;
+}
+
+
+
+.centrar{
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.formulario{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.form{
+    width: 80%;
+}
+
+
+
+
+@keyframes girar-fondo {
+    to {
+      --angulo-borde: 1turn;
+    }
+}
+
+
+
+@property --angulo-borde {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0rad;
+}
+
+
+
+.rellenar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    position: relative;
+    
+
+}
+
+.rellenar_label{
+    position: absolute;
+    left: 3em;
+    top: -0.30em;
+    background-image: linear-gradient(to right, transparent 0%, #530615 15%,#530615 85%, transparent 100%);
+    padding: 0.2em 0.7em;
+    margin-bottom: 0.8em;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+    letter-spacing: 0.5em;
+    color: #f9e4e8 ;
+    cursor: pointer;
+    border-radius: 25%;
+}
+
+.rellenar_input {
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 1;
+    border-style: none;
+    outline: none;
+    height: 3em;
+    width: 100%;
+    padding: 1em 2em;
+    padding-top: 2em;
+    border: 0.25em solid transparent;
+    background-image: linear-gradient(#0000, #000000bf), linear-gradient(120deg, #530615 0%, #8f5e5e 100%);
+    background-origin: border-box;
+    background-clip: padding-box,border-box;
+    border-radius: 1.5em;
+    background-size: 100% 100%;
+    transition: background-position 0.8s ease-out;
+    
+}
+
+.rellenar_input:focus {
+    outline: 2px dashed #dd0f0f;
+    outline-offset: 0.28em;
+} 
+
+.Texto {
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+    & a {
+        display: flex;
+        color: #4c0308;
+        text-decoration: none;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+    & .resaltar_enlace {
+        margin-left: 0.5em;
+        color: #98011f;
+        /* Agrega una transición a la transformación de escala */
+        transition: transform 1s;
+    }
+
+    & .resaltar_enlace:hover{
+        /* Aplica una transformación de escala cuando se pasa el cursor sobre el elemento */
+        transform: scale(1.15);
+    }
+}
+
+.formulario_logo{
+    width: 50%;
+    border: #530615 solid;
+    border-radius: 50%;
+    box-shadow: 5px 10px 10px #53061565 ;
+}
+
+#button_submit {
+    background-color: #5f0618;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    margin: 18px 0.2em;
+    padding: 0.8em 2em;
+    font-family: Arial, sans-serif;
+    border: 2px solid;
+    border: #39040e;
+    border-radius: 6px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  #button_submit:hover {
+    background-color: #480512;
+    
+    color: rgb(168, 168, 168);
+  }
+
+  .principal{
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
