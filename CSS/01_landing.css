@@ -1,56 +1,55 @@
 /*autor(a): Rosimar Barrios  ----  github: rossjbm*/
 /*PALETA DE COLORES: #530615 #A8030F #A69C94 #F2F2F2 #262626*/
-
-/*FLEXBOX: alinear elementos    GRID: realizar estructura*/
-
+ 
 /*Fuente descargada*/
 @font-face {
     font-family: "velocidad";
-    src: url("../font/High_Speed.otf");
+    src: url("./font/High_Speed.otf");
 }
 
-* {
+body {
     /*Igual a cero para quitar el margen predeterminado de la página*/
-    margin: 0; /*para todos los lados*/
+    margin: 0;
+    padding: 0;
 
     /*Fuente para toda la pagina*/
-    font-family: "Poppins", sans-serif; /*FONT-FAMILY: establece la tipografía para el elemneto seleccionado*/
+    font-family: "Poppins", sans-serif;
 }
 
 main {
     /*Fondo para todo el main de la página*/
-    background-color:  #d8d8d8; /*BACGROUND-COLOR: establece un color de fondo*/
+    background-color:  #d8d8d8;
 }
 
 /*PRIMERA SECTION. SECCIÓN PRINCIPAL*/
 .fondo_text {
-    /*Dimensiones de .fondo_text*/
-    width: 100%; /*ancho*/
-    height: 100vh; /*largo*/
+    /*Dimensiones*/
+    width: 100%; 
+    height: 100vh;
 
-    /*Fondo imagen de .fondo_text */
-    background-image: linear-gradient(#000000b3, #000000b3), url("../imagenes/landing_page/fondo_01.jpg"); /*BACKGROUND-IMAGE: establece una imagen de fondo para un elemento; */
-    background-position: center; /*BACKGROUND-POSITION: Posicionamiento de la imagen de fondo; CENTER: en el centro*/
-    background-size: cover; /*BACKGROUND-SIZE: especifica el tamaño de las imágenes de fondo; COVER: Escala la imagen al mayor tamaño posible sin estirarla*/
+    /*Fondo imagen*/
+    background-image: linear-gradient(#000000b3, #000000b3), url("./fondo_01.jpg"); 
+    background-position: center;
+    background-size: cover;
 
-    /*Elementos dentro de .fondo_text*/
+    /*Elementos dentro*/
     text-align: center; /*TEXT-ALING: permite establecer la alineación horizontal de un bloque de texto; CENTER: al centro*/
     color: #F2F2F2; /*color de los caracteres*/
 
-    /*Vista de alineación de elementos*/  /*DISPLAY: establece los tipos de visualización de un elemento tanto externa e interna (sus nodos hijos, su contenido)*/
-    display: flex; /*FLEX: el elemento se comporta como un elemento de bloque, los nodos hijo se convierten en elementos flexibles, es decir se pueden distribuir en dirección vertical u horizontal y sus tamaños son manejables*/
-    flex-direction: column; /*FLEX-DIRECTION: determina la dirección en que se ordenarán los elementos en el espacio; COLUMN: de arriba a abajo*/
-    justify-content: center; /*JUSTIFY-CONTENT: define cómo el navegador distribuye el espacio entre y alrededor de los items flex; CENTER: Alinear items en el centro*/
+    /*Vista de alineación de elementos*/  
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
 }
 
-/*Estilos específicos para los elementos dentro de .fondo_text*/
+/*Estilos específicos para los elementos dentro*/
 .fondo_text p, .fondo_text h3, .fondo_text h1, .fondo_text div {
     margin: 5vh auto;
 }
 .fondo_text h1 {
-    font-size: 45px; /*FONT-SIZE: establece el tamaño de la fuente(letra)*/
+    font-size: 45px;
     font-family: "velocidad";
-    text-shadow: 5px 5px 10px #000; /*TEXT-SHADOW: agrega sombras al texto, sus valores se componen de eje X; eje Y; Desenfoque; color*/
+    text-shadow: 5px 5px 10px #000;
 }
 .fondo_text h3 {
     font-size: 28px;
@@ -61,31 +60,32 @@ main {
     font-size: 20px;
 }
 
-/*PSEUDO-ELEMENTOS: permiten añadir estilos a una parte concreta del documento*/
-.fondo_text p::before, .fondo_text p::after { /*BEFORE: añade un primer hijo al elemento seleccionado; AFTER: añade un ultimo hijo al elemento seleccionado; AMBOS POR MEDIO de CONTENT""*/
+/*PSEUDO-ELEMENTOS*/
+.fondo_text p::before, .fondo_text p::after { 
     content: "↓";
-
-    /*Características para ese añadido*/
     color: #f2f2f2;
     font-size: 25px;
 }
 
-/*Botones "Regístrate" e "Iniciar" dentro de .fondo_text*/
+/*Botones "Regístrate" e "Iniciar"*/
+.fondo_text div {
+    width: 60vw;
+}
 .button_registrate, .button_iniciar {
     /*Dimensiones*/
     height: 55px;
-    width: 200px;
-    margin: 20px 70px;
+    width: 25vw;
+    margin: 7% 3%;
 
-    /*Bordes*/        /*None para quitar el borde predeterminado de los botones*/
-    border: none; /*BORDER: resumen de caracteristicas a los bordes; NONE: ninguno*/
-    border-radius: 15px; /*BORDER-RADIUS: Radio de todos los bordes*/
-    box-shadow: 5px 5px 10px #000; /*BOX-SHADOW: agrega sombras a la caja, sus valores se componen de eje X; eje Y; Desenfoque; color*/
+    /*Bordes*/        
+    border: none;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px #000;
 
     /*Texto del boton*/
     font-size: 26px;
-    font-weight: 600; /*FONT-WEIGTH: establece negrita a los caracteres con un determinado peso; VALOR 600: Semi Bold (semi negrita)*/
-    color: #000; /*COLOR: da un valor a los caracteres*/
+    font-weight: 600; 
+    color: #000;
 
     /*Transición*/
     transition: transform .3s;
@@ -99,82 +99,73 @@ main {
     background-color: #A8030F;
 }
 
-/*PSEUDO-CLASES     palabra clave agregada a un selector, que permiten definir diferentes estados a los elementos seleccionados*/
-.button_registrate:active { /*ACTIVE: al activar un boton con el click*/
+/*PSEUDO-CLASES*/
+.button_registrate:active {
     border: 2px solid #000;
     background-color: #d3d3d3;
-    transform: scale(.9); /*TRANSFORM: transforma el elemento; SCALE: transformar tamaño */
+    transform: scale(.9);
 }
 .button_iniciar:active { 
     border: 2px solid #000;
     background-color: #ec3542;
     transform: scale(.9);
 }
+.button_registrate:hover {
+    background-color: #d5d5d5;
+}
+.button_iniciar:hover {
+    background-color: #d5303b;
+}
 
 
 /* SEGUNDA SECTION. SECCIÓN DE PRESENTACIÓN DE SERVICIO */
 /*Titulo de esa section*/
 h2 {
-    /*Margen*/
-    margin: 120px auto; /*de los lados toma un valor automático*/
-
-    /*Texto*/
+    margin: 15vh 2vh;
     text-align: center;
     font-size: 40px;
     text-shadow: 5px 0px 8px #a8030f82, -5px 0px 8px #A8030F82; /*TEXT-SHADOW: agrega sombras al texto; VALOR: eje X, eje Y, desenfoque, color*/
 }
-.cont {
-    margin: 80px 0;
-
-}
 .cont_servicio {
-    /*Estructura de cont_servicio*/
-    display: grid; /*GRID: basa sus elementos a un diseño de cuadrículas con filas y columnas, permitiendo dividir la página en partes y definir tamaños, posiciones...*/
-    grid-template-columns: 1fr 1fr; /*GRID-TEMPLATES-COLUMNS: define el número de columnas y los tamaños asignados a cada una; VALOR: fr=fracción indica una fracción del espacio disponible en el contenedor de la cuadrícula.*/
-
-    grid-gap: 35px;  /*GRID-GAP: establece los espacios entre las filas o las columnas de la cuadricula*/
-    margin: 70px 30px;
+    /*Estructura*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4%;
+    margin: 7% 3%;
 }
-/*Textos dentro de article en cont_servicio*/
+/*Textos dentro*/
 .text_servicio_izq, .text_servicio_der {
-    /*Elementos dentro de text_servicio*/
-    padding: 10px;   /*PADDING (relleno): separación entre el borde y el contenido; VALOR: para todos los lados*/
-    margin: 0 40px;  /*MARGIN (margen): separación entre borde y la página; VALOR: para arriba_abajo y derecha-izquierda*/
+    padding: 10px;   
+    margin: 0 3%;
     text-align: center;
+    color: #f2f2f2;
 
     /*Alinear ;)*/
     display: flex;
     flex-direction: column;
-    justify-content: space-around; /*APACE-AROUND: los elementos tienen el mismo espacio a su alrededor*/
-
-    /*Letra*/
-    color: #f2f2f2;
+    justify-content: space-around;
 
     /*Animación*/
-    animation: fondo_dinamico 5.5s linear infinite;  /*ANIMATION: aplica una animación a los estilos de un determinado elemento; VALOR: nombre, duración de animación, progresión de la animación en cada ciclo (LINEAR: velocidad uniforme), numero de veces que un ciclo de animación debe ser ejecutado (INFINITE: repetición infinita)*/
-}
-.text_servicio_der {
-    /*Radio de los bordes*/
-    border-bottom-left-radius: 50px; /*BORDER-BOTTOM-LEFT-RADIUS: Radio del borde de la esquina inferior izquierda*/
-    border-top-right-radius: 50px; /*BORDER-TOP-RIGHT-RADIUS: Radio del borde de la esquina superior derecha*/
-
-    /*Fondo*/
-    background: linear-gradient( to right top,  #2b1717, #3b0510, #a8030eee, #3b0510,  #2b1717); /*LINEAR-GRADIENT: transición progresiva entre dos o más colores a lo largo de una línea recta*/
-    background-size: 400% 400%; /*Le damos el ancho y largo del tamaño de la imagen fondo*/
-}
-.text_servicio_izq {
-    /*Radio de los bordes*/
-    border-top-left-radius: 50px; /*BORDER-TOP-LEFT-RADIUS: Radio del borde de la esquina superior izquierda*/
-    border-bottom-right-radius: 50px; /*BORDER-BOTTOM-RIGHT-RADIUS: Radio del borde de la esquina inferior derecha*/
-
+    animation: fondo_dinamico 5.5s linear infinite;
+    
     /*Fondo*/
     background: linear-gradient( to right top,  #2b1717, #3b0510, #a8030eee, #3b0510,  #2b1717);
     background-size: 400% 400%;
 }
+.text_servicio_der {
+    /*Radio de los bordes*/
+    border-bottom-left-radius: 50px; 
+    border-top-right-radius: 50px;
+}
+.text_servicio_izq {
+    /*Radio de los bordes*/
+    border-top-left-radius: 50px; 
+    border-bottom-right-radius: 50px;
+}
 
 .text_servicio_der, .text_servicio_izq, .img_servicio_der , .img_servicio_izq {
     /*Transición */
-    transition: transform 1s ease-in-out;  /*TRANSITION: permite definir la transición entre dos estados de un elemento; VALOR: propiedad a la que se le aplica, duración de transición, velocidad de la transición (EASE-IN-OUT: empieza y acaba lentamente, y en la central es rápido)*/
+    transition: transform 1s ease-in-out; 
 } 
 
 /*PSEUDO-CLASES*/
@@ -182,10 +173,10 @@ h2 {
     transform: scale(1.1); 
 }
 
-/*@KEYFRAMES: es una regla de CSS que permite construir animaciones.          ¡¡Recordarme!!: Las reglas Css son las sentencias en las hojas de estilo, hay dos tipos de @ y las comunes*/
-@keyframes fondo_dinamico { /*nombre de la animación*/
-    0% { /*cuando la animación vaya a este porciento (a este tiempo)*/
-        background-position: 0% 50%; /*cambia la posición del fondo*/
+/*Para animación*/
+@keyframes fondo_dinamico { 
+    0% {
+        background-position: 0% 50%;
     } 25% {
         background-position: 50% 50%;
     } 50% {
@@ -205,45 +196,38 @@ h2 {
     font-size: 18px;
 }
 
-/*Imágenes dentro de cont_servicio*/
+/*Imágenes dentro*/
 .img_servicio_izq, .img_servicio_der{
     /*Dimensiones*/
     height: 200px;
-    width: 400px;
+    width: 80%;
 
     /*Ajuste de imagen*/
-    object-fit: cover; /*OBJECT-FIT: establece cómo se debe cambiar el tamaño del contenido de un elemento dentro de su contenedor; COVER: llena todo el cuadro de contenido del elemento, se recortará para ajustarse*/
+    object-fit: cover;
 }
 .img_servicio_der {
-    /*Margen*/
     margin-right: auto;
-    padding-left: 40px;
+    padding-left: 3%;
 
     /*Forma de los bordes*/
     border-top-left-radius: 20%; 
-    border-bottom-right-radius: 50px;
+    border-bottom-right-radius: 20%;
 }
 .img_servicio_izq {
-    /*Margen*/
     margin-left: auto;
-    padding-right: 40px;
+    padding-right: 3%;
 
     /*Forma de los bordes*/
-    border-bottom-left-radius: 50px;
+    border-bottom-left-radius: 20%;
     border-top-right-radius: 20%; 
 
-    object-position: top; /*OBJECT-POSOTION: establece la posición del contenido dentro de un elemento; TOP: arriba*/
+    object-position: top; 
 }
 
 /*Parrafos de invitación al servicio dentro de cont_servicio*/
 .invita_servicio, .invita_servicio_reg {
-    /*Medidas extra*/
-    margin: 40px 0;
-
-    /*Centrado del texto*/
+    margin: 8vh 2vh;
     text-align: center;
-
-    /*Tamaño*/
     font-size: 28px;
 }
 .invita_servicio_reg {
@@ -254,12 +238,10 @@ h2 {
 }
 .invita_servicio_reg a {
     /*Para quitar la línea decorativa predeterminada de los enlaces*/
-    text-decoration: none; /*TEXT-DECORATION: da estilos a las líneas decorativas en el texto; NONE: ninguno*/
+    text-decoration: none; 
 
     /*Color del texto*/
     color: #530615;
-
-    /*Tamaño y Tipografía*/
     font-family: "velocidad";
     font-size: 30px;
 }
@@ -267,36 +249,33 @@ h2 {
 
  /* TERCERA PARTE. SECCION DE BASES ORGANIZACIONALES  */
  .cont_bases {
-    /*Vista de estructura de los elementos dentro de .cont_bases*/
+    /*Estructura*/
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-
-    /*espaciado entre elementos*/
-    grid-gap: 35px;
-    margin: 50px 30px 0px 30px; /*VALOR: izquierda, derecha, abajo, arriba*/
+    grid-gap: 3vw;
+    margin: 9vh 2vw 0vh 2vw;
 }
 .text_bases {
-    /*Centrado, margen y padding de los textos en cont_bases*/
     text-align: center;
-    margin: 50px 5px;
-    padding: 15px;
+    margin: 6vh 0;
+    padding: 10px;
 
     /*Alinear elementos*/
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /*SPACE-BETWEEEN: espacio entre los elementos, donde el primero este al inicio y el último al final de la cuadricula*/
+    justify-content: space-between;
 
     /*Borde*/
-    border: 8px dotted #262626; /*VALOR: tamaño, tipo, color*/
+    border: 8px dotted #262626;
 }
 
-/*PSEUDO-CLASES para text_bases*/
+/*PSEUDO-CLASES*/
 .text_bases:hover {
     /* Fondo */
     background: linear-gradient( to right top, #a69c94, #f2f2f2bb, #f2f2f2bb,  #a69c94);
 }
 
-/*Elementos p, ul, li dentro de text_bases*/
+/*Elementos p, ul, li*/
 .text_bases p {
     /*Tamaño y margen*/
     font-size: 18px;
@@ -309,7 +288,7 @@ h2 {
 }
 .text_bases ul {
     /*Para quitar los estilos predeterminados de las listas*/
-    list-style: none; /*permite configurar todas las propiedades de estilo para lista a la vez; NONE: ninguno*/
+    list-style: none; 
 
     /*Igual a cero para quitar el padding predeterminado de las listas*/
     padding: 0;
@@ -318,4 +297,496 @@ h2 {
     /*Tamaño y margen*/
     font-size: 20px;
     margin: 14px 0;
+}
+
+
+/*TAMAÑOS en px: 
+H1  7vw
+H2  40
+H3  4.5
+P   18*/
+
+/*DISEÑO RESPONSIVE PARA TELÉFONOS*/
+@media (max-width: 720px) and (max-height: 1280px) {
+    * {
+        max-width: 100vw; 
+    }
+
+    /*PRIMERA SECTION. SECCIÓN PRINCIPAL*/
+    .fondo_text h1 {
+        font-size: 7vw;
+    }
+    .fondo_text h3 {
+        font-size: 4.5vw;
+    }
+    .fondo_text p {
+        font-size: 3.8vw;
+    }
+    .button_registrate, .button_iniciar {
+        width: 40vw;
+        font-size: 4.5vw;
+    }
+    /* SEGUNDA SECTION. SECCIÓN DE PRESENTACIÓN DE SERVICIO */
+    h2 {
+        font-size: 6vw;
+        margin-bottom: auto;
+    }
+    .cont_servicio {
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto;
+        margin: 15vh 2vh;
+    }
+        /* cajas de texto */
+    .text_servicio_izq, .text_servicio_der {
+        justify-content: center; 
+        border-radius: 50px;
+    }
+    .text_servicio_der h3, .text_servicio_izq h3 {
+        font-size: 5vw;
+    }
+    .text_servicio_der p, .text_servicio_izq p {
+        font-size: 3.5vw;
+    }
+        /* imagenes */
+    .img_servicio_izq, .img_servicio_der {
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 50px;
+        height: 300px;
+    }
+    .img_servicio_izq {
+        margin-top: auto;
+        margin-bottom: 0;
+    }
+    .img_servicio_der {
+        margin-top: 0;
+        margin-bottom: auto;
+    }
+        /* párrafos de invitación*/
+    .invita_servicio , .invita_servicio_reg , .invita_servicio_reg a{
+        font-size: 6vw;
+        margin: 7vh 2vh;
+    }
+    /* TERCERA PARTE. SECCION DE BASES ORGANIZACIONALES  */
+    .cont_bases {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        margin: 20vw auto auto auto;
+    }
+    .text_bases {
+        margin: auto 4vh 10vh 4vh;
+        justify-content: center;
+        background: linear-gradient( to right top, #a69c94, #f2f2f2bb, #f2f2f2bb,  #a69c94);
+    }
+    .text_bases p {
+        font-size: 3.5vw;
+        margin: 10px 0;
+    }
+    .text_bases h3 {
+        font-size: 5vw;
+        margin: 10px auto;
+    }
+    .text_bases ul {
+        margin: auto;
+    }
+    .text_bases li {
+        font-size: 3.5vw;
+        margin: 8px 0;
+    }
+}
+/*autor(a): Rosimar Barrios*/
+/*PALETA DE COLORES: #530615 #A8030F #A69C94 #F2F2F2 #262626*/
+ 
+/*Fuente descargada*/
+@font-face {
+    font-family: "velocidad";
+    src: url("./font/High_Speed.otf");
+}
+
+body {
+    /*Igual a cero para quitar el margen predeterminado de la página*/
+    margin: 0;
+    padding: 0;
+
+    /*Fuente para toda la pagina*/
+    font-family: "Poppins", sans-serif;
+}
+
+main {
+    /*Fondo para todo el main de la página*/
+    background-color:  #d8d8d8;
+}
+
+/*PRIMERA SECTION. SECCIÓN PRINCIPAL*/
+.fondo_text {
+    /*Dimensiones*/
+    width: 100%; 
+    height: 100vh;
+
+    /*Fondo imagen*/
+    background-image: linear-gradient(#000000b3, #000000b3), url("./fondo_01.jpg"); 
+    background-position: center;
+    background-size: cover;
+
+    /*Elementos dentro*/
+    text-align: center; /*TEXT-ALING: permite establecer la alineación horizontal de un bloque de texto; CENTER: al centro*/
+    color: #F2F2F2; /*color de los caracteres*/
+
+    /*Vista de alineación de elementos*/  
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+}
+
+/*Estilos específicos para los elementos dentro*/
+.fondo_text p, .fondo_text h3, .fondo_text h1, .fondo_text div {
+    margin: 5vh auto;
+}
+.fondo_text h1 {
+    font-size: 45px;
+    font-family: "velocidad";
+    text-shadow: 5px 5px 10px #000;
+}
+.fondo_text h3 {
+    font-size: 28px;
+    text-shadow: 5px 5px 10px #000;
+
+}
+.fondo_text p {
+    font-size: 20px;
+}
+
+/*PSEUDO-ELEMENTOS*/
+.fondo_text p::before, .fondo_text p::after { 
+    content: "↓";
+    color: #f2f2f2;
+    font-size: 25px;
+}
+
+/*Botones "Regístrate" e "Iniciar"*/
+.fondo_text div {
+    width: 60vw;
+}
+.button_registrate, .button_iniciar {
+    /*Dimensiones*/
+    height: 55px;
+    width: 25vw;
+    margin: 7% 3%;
+
+    /*Bordes*/        
+    border: none;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px #000;
+
+    /*Texto del boton*/
+    font-size: 26px;
+    font-weight: 600; 
+    color: #000;
+
+    /*Transición*/
+    transition: transform .3s;
+}
+.button_registrate {
+    /*Fondo*/
+    background-color: #d0c4b9ee; 
+}
+.button_iniciar {
+    /*Fondo*/
+    background-color: #A8030F;
+}
+
+/*PSEUDO-CLASES*/
+.button_registrate:active {
+    border: 2px solid #000;
+    background-color: #d3d3d3;
+    transform: scale(.9);
+}
+.button_iniciar:active { 
+    border: 2px solid #000;
+    background-color: #ec3542;
+    transform: scale(.9);
+}
+.button_registrate:hover {
+    background-color: #d5d5d5;
+}
+.button_iniciar:hover {
+    background-color: #d5303b;
+}
+
+
+/* SEGUNDA SECTION. SECCIÓN DE PRESENTACIÓN DE SERVICIO */
+/*Titulo de esa section*/
+h2 {
+    margin: 15vh 2vh;
+    text-align: center;
+    font-size: 40px;
+    text-shadow: 5px 0px 8px #a8030f82, -5px 0px 8px #A8030F82; /*TEXT-SHADOW: agrega sombras al texto; VALOR: eje X, eje Y, desenfoque, color*/
+}
+.cont_servicio {
+    /*Estructura*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4%;
+    margin: 7% 3%;
+}
+/*Textos dentro*/
+.text_servicio_izq, .text_servicio_der {
+    padding: 10px;   
+    margin: 0 3%;
+    text-align: center;
+    color: #f2f2f2;
+
+    /*Alinear ;)*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    /*Animación*/
+    animation: fondo_dinamico 5.5s linear infinite;
+    
+    /*Fondo*/
+    background: linear-gradient( to right top,  #2b1717, #3b0510, #a8030eee, #3b0510,  #2b1717);
+    background-size: 400% 400%;
+}
+.text_servicio_der {
+    /*Radio de los bordes*/
+    border-bottom-left-radius: 50px; 
+    border-top-right-radius: 50px;
+}
+.text_servicio_izq {
+    /*Radio de los bordes*/
+    border-top-left-radius: 50px; 
+    border-bottom-right-radius: 50px;
+}
+
+.text_servicio_der, .text_servicio_izq, .img_servicio_der , .img_servicio_izq {
+    /*Transición */
+    transition: transform 1s ease-in-out; 
+} 
+
+/*PSEUDO-CLASES*/
+.text_servicio_der:hover, .text_servicio_izq:hover, .img_servicio_der:hover, .img_servicio_izq:hover { /*HOVER: cuando el cursor pasa sobre un elemento*/
+    transform: scale(1.1); 
+}
+
+/*Para animación*/
+@keyframes fondo_dinamico { 
+    0% {
+        background-position: 0% 50%;
+    } 25% {
+        background-position: 50% 50%;
+    } 50% {
+        background-position: 100% 50%;
+    } 75% {
+        background-position: 50% 50%;
+    } 100% {
+        background-position: 0% 50%;
+    }
+}
+
+/*Tamaño de fuentes*/
+.text_servicio_der h3, .text_servicio_izq h3 {
+    font-size: 24px;
+}
+.text_servicio_der p, .text_servicio_izq p {
+    font-size: 18px;
+}
+
+/*Imágenes dentro*/
+.img_servicio_izq, .img_servicio_der{
+    /*Dimensiones*/
+    height: 200px;
+    width: 80%;
+
+    /*Ajuste de imagen*/
+    object-fit: cover;
+}
+.img_servicio_der {
+    margin-right: auto;
+    padding-left: 3%;
+
+    /*Forma de los bordes*/
+    border-top-left-radius: 20%; 
+    border-bottom-right-radius: 20%;
+}
+.img_servicio_izq {
+    margin-left: auto;
+    padding-right: 3%;
+
+    /*Forma de los bordes*/
+    border-bottom-left-radius: 20%;
+    border-top-right-radius: 20%; 
+
+    object-position: top; 
+}
+
+/*Parrafos de invitación al servicio dentro de cont_servicio*/
+.invita_servicio, .invita_servicio_reg {
+    margin: 8vh 2vh;
+    text-align: center;
+    font-size: 28px;
+}
+.invita_servicio_reg {
+    /*Tamaño*/
+    font-size: 35px;
+    text-shadow: 5px 0px 8px #a8030f82, -5px 0px 8px #a8030f82;
+
+}
+.invita_servicio_reg a {
+    /*Para quitar la línea decorativa predeterminada de los enlaces*/
+    text-decoration: none; 
+
+    /*Color del texto*/
+    color: #530615;
+    font-family: "velocidad";
+    font-size: 30px;
+}
+
+
+ /* TERCERA PARTE. SECCION DE BASES ORGANIZACIONALES  */
+ .cont_bases {
+    /*Estructura*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 3vw;
+    margin: 9vh 2vw 0vh 2vw;
+}
+.text_bases {
+    text-align: center;
+    margin: 6vh 0;
+    padding: 10px;
+
+    /*Alinear elementos*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    /*Borde*/
+    border: 8px dotted #262626;
+}
+
+/*PSEUDO-CLASES*/
+.text_bases:hover {
+    /* Fondo */
+    background: linear-gradient( to right top, #a69c94, #f2f2f2bb, #f2f2f2bb,  #a69c94);
+}
+
+/*Elementos p, ul, li*/
+.text_bases p {
+    /*Tamaño y margen*/
+    font-size: 18px;
+    margin: 20px 0;
+}
+.text_bases h3 {
+    /*Tamaño del texto y tipografía*/
+    font-size: 24px;
+    font-family: "velocidad";
+}
+.text_bases ul {
+    /*Para quitar los estilos predeterminados de las listas*/
+    list-style: none; 
+
+    /*Igual a cero para quitar el padding predeterminado de las listas*/
+    padding: 0;
+}
+.text_bases li {
+    /*Tamaño y margen*/
+    font-size: 20px;
+    margin: 14px 0;
+}
+
+
+/*TAMAÑOS en px: 
+H1  7vw
+H2  40
+H3  4.5
+P   18*/
+
+/*DISEÑO RESPONSIVE PARA TELÉFONOS*/
+@media (max-width: 720px) and (max-height: 1280px) {
+    * {
+        max-width: 100vw; 
+    }
+
+    /*PRIMERA SECTION. SECCIÓN PRINCIPAL*/
+    .fondo_text h1 {
+        font-size: 7vw;
+    }
+    .fondo_text h3 {
+        font-size: 4.5vw;
+    }
+    .fondo_text p {
+        font-size: 3.8vw;
+    }
+    .button_registrate, .button_iniciar {
+        width: 40vw;
+        font-size: 4.5vw;
+    }
+    /* SEGUNDA SECTION. SECCIÓN DE PRESENTACIÓN DE SERVICIO */
+    h2 {
+        font-size: 6vw;
+        margin-bottom: auto;
+    }
+    .cont_servicio {
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto;
+        margin: 15vh 2vh;
+    }
+        /* cajas de texto */
+    .text_servicio_izq, .text_servicio_der {
+        justify-content: center; 
+        border-radius: 50px;
+    }
+    .text_servicio_der h3, .text_servicio_izq h3 {
+        font-size: 5vw;
+    }
+    .text_servicio_der p, .text_servicio_izq p {
+        font-size: 3.5vw;
+    }
+        /* imagenes */
+    .img_servicio_izq, .img_servicio_der {
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 50px;
+        height: 300px;
+    }
+    .img_servicio_izq {
+        margin-top: auto;
+        margin-bottom: 0;
+    }
+    .img_servicio_der {
+        margin-top: 0;
+        margin-bottom: auto;
+    }
+        /* párrafos de invitación*/
+    .invita_servicio , .invita_servicio_reg , .invita_servicio_reg a{
+        font-size: 6vw;
+        margin: 7vh 2vh;
+    }
+    /* TERCERA PARTE. SECCION DE BASES ORGANIZACIONALES  */
+    .cont_bases {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        margin: 20vw auto auto auto;
+    }
+    .text_bases {
+        margin: auto 4vh 10vh 4vh;
+        justify-content: center;
+        background: linear-gradient( to right top, #a69c94, #f2f2f2bb, #f2f2f2bb,  #a69c94);
+    }
+    .text_bases p {
+        font-size: 3.5vw;
+        margin: 10px 0;
+    }
+    .text_bases h3 {
+        font-size: 5vw;
+        margin: 10px auto;
+    }
+    .text_bases ul {
+        margin: auto;
+    }
+    .text_bases li {
+        font-size: 3.5vw;
+        margin: 8px 0;
+    }
 }
