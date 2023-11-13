@@ -7,7 +7,6 @@ class login{
         var parámetro = req.body
         try {
             var usuario = await iniciar_models.verificaUser(parámetro.email)
-            console.log(usuario.contrasena);
 
 
             let contraseñaVerificada = await bcryptjs.compare(parámetro.password, usuario.contrasena)
@@ -16,7 +15,7 @@ class login{
             }
             
             res.json({
-                    
+
                     "confirmacion": true
                   
             }).status('200')
