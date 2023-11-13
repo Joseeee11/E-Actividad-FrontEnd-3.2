@@ -13,7 +13,7 @@
     <link rel="icon" href="../imagenes/logo6.png" type="image/x-icon" />
     <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"/>
 
-    <link rel="stylesheet" href="../CSS/Carrostyle.css">
+    <link rel="stylesheet" href="/CSS/StylesCarusel.css">
 </head>
 <body>
 
@@ -59,21 +59,69 @@
 
     <!-- Realizado Por Jose Manuel Marquez -->
     <!--Esta es la extructura principal del contenedor para la compra del vehiculo  -->
-    <section class="contenedor flex text-centrado">
-        <div class="columna">
-            <h2>Honda Accord LX</h2>
-           <img src="../imagenes/carros/carro1.png" alt="">
-            <p class="precio">28.000,00$</p>
-            <p>Honda Accord LX 13000KM con frenos abs y motor v8</p>
-            <hr>
-            <p>El producto viene con mantenimiento hasta los 50000 KM</p>
-            <hr>
-            <a href="#" class="btc-precio">Comprar</a>
-        </div>
+    <section>
 
-        
-    </section>
-    <div class="volver"><a href="./catalogo.html">Volver</a></div>    
+      <div class="carrousel">
+          <div class="grande">
+              
+              <div class="img">
+                  <h2 class="text">HONDA ACCORD LX</h2>
+                 <img src="/imagenes/carros/carro1.png" alt="" class="imga">
+                  <p class="precio">28.000,00$</p>
+                  <p class="text">HONDA ACCORD LX 13000KM con frenos abs y motor v8</p>
+                  <hr>
+                  <p class="text">El producto viene con mantenimiento hasta los 50000 KM</p>
+                  <hr>
+                  <a href="#" class="btc-precio">Comprar</a>
+                  <a href="#" class="btc-precio">Rentar</a>
+              </div>
+              <div class="img">
+                  <h2 class="text">HONDA CIVIC HATCHBACK LS</h2>
+                 <img src="/imagenes/carros/carro2.png" alt="" class="imga">
+                  <p class="precio">28.000,00$</p>
+                  <p class="text">Honda Accord LX 13000KM con frenos abs y motor v8</p>
+                  <hr>
+                  <p class="text">El producto viene con mantenimiento hasta los 50000 KM</p>
+                  <hr>
+                  <a href="#" class="btc-precio">Comprar</a>
+                  <a href="#" class="btc-precio">Rentar</a>
+              </div>
+              <div class="img">
+                  <h2 class="text">HONDA ACCORD HYBRID LT</h2>
+                 <img src="/imagenes/carros/carro3.png" alt="" class="imga">
+                  <p class="precio">22.000,00$</p>
+                  <p class="text">Honda Accord LX 8000KM con frenos abs y motor v8</p>
+                  <hr>
+                  <p class="text">El producto viene con mantenimiento hasta los 50000 KM</p>
+                  <hr>
+                  <a href="#" class="btc-precio">Comprar</a>
+                  <a href="#" class="btc-precio">Rentar</a>
+              </div>
+
+              <div class="img">
+                  <h2 class="text">HONDA LX</h2>
+                 <img src="/imagenes/carros/carro4.png" alt="" class="imga">
+                  <p class="precio">15.000,00$</p>
+                  <p class="text">HONDA LX 10000KM con frenos abs y motor v8</p>
+                  <hr>
+                  <p class="text">El producto viene con mantenimiento hasta los 50000 KM</p>
+                  <hr>
+                  <a href="#" class="btc-precio">Comprar</a>
+                  <a href="#" class="btc-precio">Rentar</a>
+              </div>
+
+          </div>
+  
+          <ul class="puntos">
+              <li class="punto activo"></li>
+              <li class="punto"></li>
+              <li class="punto"></li>
+              <li class="punto"></li>
+          </ul>
+      </div>
+
+  </section>
+   
     <!-- Realizado Por Jose Manuel Marquez -->
 
     <!-- PIE DE PAGINA FOOTER hecho por el compañero Javier Olivar -->
@@ -124,6 +172,7 @@
     </footer>
     <!-- script para que la librería funcione -->
     <script src="../libs/bootstrap/js/bootstrap.min.js"></script> 
+    <script defer src="/JS/Carusel.js" ></script>   
     <!-- PIE DE PAGINA FOOTER -->
 
 </body>
