@@ -131,41 +131,7 @@
         </p>
       </footer>
 
-      <script>
-        document.getElementById('button_submit').addEventListener('click', function(e) {
-          e.preventDefault();
-        
-          // Aquí puedes agregar tu código para validar los datos del formulario
-        
-          // Si todo está bien, envía el formulario
-          var form = document.querySelector('.form');
-          var data = new URLSearchParams(new FormData(form));
-        
-          fetch('http://localhost:3000/iniciar_sesion', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            body: data
-          })
-          .then(response => response.json())
-          .then(response => {
-            if (response.result && response.result.confirmacion == true) {
-
-              console.log('se encontro');
-              window.location.href = './catalogo.html';
-            } else {
-              // Muestra un mensaje de error
-              var errorDiv = document.createElement('div');
-              errorDiv.textContent = 'Usuario o contraseña incorrectos';
-              form.insertBefore(errorDiv, form.firstChild);
-            }
-          })
-          .catch((error) => {
-            console.error('Error:', error);
-          });
-        });
-        </script>
+      <script src="../JS/iniciar_sesion.js"></script>
         
         
         

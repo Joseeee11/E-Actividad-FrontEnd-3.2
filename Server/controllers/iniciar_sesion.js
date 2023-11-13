@@ -1,27 +1,37 @@
-const { log } = require('debug/src/browser')
 const iniciar_models = require('../models/inicar_sesion')
-
+const bcryptjs = require('bcryptjs')
 
 
 class login{
     async iniciar_sesion(req, res, next){
         var parámetro = req.body
         try {
-            console.log(parámetro.email);
             var usuario = await iniciar_models.verificaUser(parámetro.email)
-            console.log(usuario);
+            console.log(usuario.contrasena);
+
+
+            let contraseñaVerificada = await bcryptjs.compare(parámetro.password, usuario.contrasena)
+            if (!contraseñaVerificada) {
+                throw ("contraseña incorrecta")
+            }
+            
             res.json({
-                
+                    
                     "confirmacion": true
                   
             }).status('200')
             
         } catch (error) {
-            if (error = "Usuario no encontrado") {
-                res.json().status('404')
+            if (error == "Usuario no encontrado") {
+                console.log(error);
             }
-            console.log(error);
-            console.log("error controller");
+
+            // para proteger al usuario siempre usamos un mensaje que generalice el error
+            res.json({
+                "error":"Usuario o contraseña incorrectos",
+                "confirmacion": false
+
+            }).status('404')
         }
     }
 }

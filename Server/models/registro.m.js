@@ -1,12 +1,17 @@
-// const connection = require("../db/myslq");
+const connection = require("../db/myslq");
 
 class registroModel {
     //agregar un usuario
     agregar(datos) {
         // aquí falta una promesa
+        return new Promise((resolve, reject) => {
         connection.query('INSERT INTO usuarios set ?', [datos], function (error, results, fields) {
-            if (error) reject (error);
+            if (error){ 
+                reject (error)
+            };
+            
             resolve("Se agrego correctamente");
+        })
         })
     }
 }

@@ -1,33 +1,52 @@
-const registroModel = require("../models/registro.m.js")
-
-//importamos bcrypt
+const { verify } = require("jsonwebtoken");
+const registroModel = require("../models/registro.m.js");
 const bcryptjs = require('bcryptjs');
+const validator = require('validator')
+
 
 class registroControllers {
-    agregar(body) {
-        return new Promise( async(resolve, reject) => {
-            console.log('estamos en controladores de registro')
-            const {nombre_apellido, correo, contrasena} = body;
-            const datos = {nombre_apellido, correo, contrasena};
+    async agregar(req, res, next) {
+     console.log('llega');
+        const {name, email, password, confirm_password} = req.body;
 
-            console.log(datos);
-
-            if (!datos || !datos.nombre_apellido || !datos.correo || !datos.contrasena ) {
-                return reject("Ingresa los datos correctamente")
+       
+        try {
+            if ( !name || !email || !password || !confirm_password ) {
+                throw("Ingresa los datos correctamente");
+            };
+            if (password != confirm_password) {
+                throw('Las contraseñas no coinciden');
+            };
+            if (!validator.isEmail(email)) {
+                throw('Correo invalido')
             }
 
-            //Encriptar contraseñas
-            var contrasenaHash = await bcryptjs.hash(datos.contrasena, 8);
-            datos.contrasena = contrasenaHash;
+            let contrasena =await bcryptjs.hash(password, 8);
+            let correo = email;
+            let nombre_apellido= name;
 
-            registroModel.agregar(datos)
-            .then(() =>  {
-                resolve(`Se agregó correctamente el personal: ${datos.nombre_apellido}`)
+            let datos = { nombre_apellido, correo, contrasena}
+            const registrar = await registroModel.agregar(datos)
+            if (registrar!='Se agrego correctamente') {
+                throw('error al registrar en la DB')
+            }else{
+                res.json({
+                
+                    "confirmacion": true
+                
+            }).status('200')
+
+            }
+
+        } catch (error) {
+            console.log('error');
+            res.status('404').json({
+
+                "error":error,
+                "confirmacion": false
+
             })
-            .catch((err) => {
-                reject(err)
-            })
-        })
+        }
     }
 }
 

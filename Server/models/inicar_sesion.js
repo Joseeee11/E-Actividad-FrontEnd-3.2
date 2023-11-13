@@ -15,7 +15,7 @@ class loginModel{
                 if (Object.keys(results).length === 0) {
                     console.log(typeof(results));
                     return reject ('Usuario no encontrado')
-                }-
+                }
                 resolve (results[0]);
             })
         })
