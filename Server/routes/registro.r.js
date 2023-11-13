@@ -1,3 +1,4 @@
+//  Código escrito por Cristian José
 var express = require('express');
 var router = express.Router();
 var registroControllers = require("../controllers/registro.c.js");

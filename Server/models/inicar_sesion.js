@@ -1,3 +1,4 @@
+//  Código escrito por Cristian José
 const connection = require('../db/myslq');
 
 class loginModel{
@@ -13,7 +14,6 @@ class loginModel{
                     return reject ("Mas de un usuario encontrado")
                 }
                 if (Object.keys(results).length === 0) {
-                    console.log(typeof(results));
                     return reject ('Usuario no encontrado')
                 }
                 resolve (results[0]);

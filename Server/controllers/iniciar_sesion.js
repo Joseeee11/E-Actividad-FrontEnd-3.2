@@ -1,3 +1,4 @@
+//  Código escrito por Cristian José
 const iniciar_models = require('../models/inicar_sesion')
 const bcryptjs = require('bcryptjs')
 
@@ -27,7 +28,7 @@ class login{
 
             // para proteger al usuario siempre usamos un mensaje que generalice el error
             res.json({
-                "error":"Usuario o contraseña incorrectos",
+                "error":"Correo o contraseña incorrectos",
                 "confirmacion": false
 
             }).status('404')
