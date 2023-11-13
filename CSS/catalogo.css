@@ -88,3 +88,38 @@
   text-transform: uppercase;
   font-size: 18px;
 }
+
+/*Parallax*/
+/*<!-- Actividad-FrontEnd-3.2 --> */
+#texto-central {
+  color: #2b2a2a;
+  background-color: white;
+  text-align: center;
+  padding: 50px 80px;
+  text-align: justify;
+}
+
+.titulo-central {
+  text-align: center;
+}
+
+.bgimg-2 {
+  position: relative;
+  opacity: 0.9;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bgimg-2 {
+  background-image: url("../imagenes/parallax.jpg");
+  min-height: 400px;
+}
+
+/* Deshabilita el efecto parallax para tablets y telefonos */
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-2 {
+    background-attachment: scroll;
+  }
+}
