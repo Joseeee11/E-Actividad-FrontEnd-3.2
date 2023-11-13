@@ -1,3 +1,4 @@
+//  Código escrito por Cristian José
 const connection = require("../db/myslq");
 
 class registroModel {

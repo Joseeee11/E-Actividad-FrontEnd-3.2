@@ -1,3 +1,4 @@
+//  Código escrito por Cristian José
 require('dotenv').config();
 var mysql = require('mysql');
 var connection = mysql.createConnection({

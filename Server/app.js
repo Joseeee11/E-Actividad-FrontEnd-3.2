@@ -5,9 +5,6 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require('cors')
 
-
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 var iniciar_sesion = require('./routes/iniciar_sesion')
 var registroRouter = require('./routes/registro.r')
 
@@ -24,8 +21,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/iniciar_sesion', iniciar_sesion)
 app.use('/registro', registroRouter)
 
