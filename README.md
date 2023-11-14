@@ -10,7 +10,7 @@
 <br>
 
 <h2>Introducción</h2>
-<p><b>Link del video explicativo:</b>  </p>
+<p><b>Link del video explicativo:</b> https://youtu.be/Y7YTnG1_Ohk </p>
 <p>Esta es una continuación de nuestro proyecto iniciado en la <b>Actividad 3.1</b> (aquí te dejamos el link por si no lo has visto: <i>https://github.com/Joseeee11/E-Actividad-FrontEnd-3.1?authuser=0</i> ), en esta segunda parte el objetivo es aplicar un Diseño Responsive a nuestro sitio web siguiendo con los principios UX/UI, con determinados efectos extra como un: Efecto Parallax, Menu Desplegable, y un Carrusel de Imágenes. Por último, implementar la herramienta de <b>Webpack</b> para minificar los archivos de código</p> 
 <p> La página web consiste en un consecionario online de todo tipo de vehículos nuevos y usados.</p>
 
