@@ -1,3 +1,10 @@
+
+
+/* Optimización de para webpack, Cristian Rangel*/
+@import url('../CSS/header.css');
+@import url('../CSS/footer.css');
+/* Fin de la Optimización */
+
 body {
     font-family: var(--tipo-principal);
     font-size: 150%;

@@ -1,5 +1,8 @@
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+var __webpack_exports__ = {};
 // envió de formulario con x-www-form-urlencoded 
-import '../CSS/InicioSesiónMain.css';
+
 document.getElementById('button_submit').addEventListener('click', function (formulario) {
     formulario.preventDefault();
 
@@ -40,3 +43,6 @@ document.getElementById('button_submit').addEventListener('click', function (for
         console.error('Error:', error);
       });
 })
+
+/******/ })()
+;

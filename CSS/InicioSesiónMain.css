@@ -1,5 +1,10 @@
 /* CSS de inicio de sesión y registro Hecho por Cristian Rangel */
 
+/* Optimización de para webpack, Cristian Rangel*/
+@import url('../CSS/header.css');
+@import url('../CSS/footer.css');
+/* Fin de la Optimización */
+
 body{
     margin: 0;
     padding: 0;

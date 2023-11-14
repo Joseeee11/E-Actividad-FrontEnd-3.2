@@ -1,6 +1,12 @@
 /* <!-- Hecho por Javier Olivar, Cedula: 30.737.648 -->
 <!-- Actividad-FrontEnd-3.1 --> */
 
+/* Optimización de para webpack, Cristian Rangel*/
+@import url('../CSS/header.css');
+@import url('../CSS/footer.css');
+/* Fin de la Optimización */
+
+
 /* Catalogo */
 
 #ads {

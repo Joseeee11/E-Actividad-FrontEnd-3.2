@@ -1,5 +1,8 @@
-import '../CSS/Carrostyle.css'
-import '../CSS/StylesCarusel.css'
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+var __webpack_exports__ = {};
+
+
 
 'use strict'
 
@@ -30,3 +33,5 @@ punto.forEach( ( cadaPunto , i )=> {
 
 
 ( condicion ) ? 'hola' : 'adiós'
+/******/ })()
+;

@@ -1,6 +1,12 @@
 /*autor(a): Rosimar Barrios*/
 /*PALETA DE COLORES: #530615 #A8030F #A69C94 #F2F2F2 #262626*/
- 
+
+/* Optimización de para webpack, Cristian Rangel*/
+@import url('../CSS/header.css');
+@import url('../CSS/footer.css');
+/* Fin de la Optimización */
+
+
 /*Fuente descargada*/
 @font-face {
     font-family: "velocidad";
