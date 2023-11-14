@@ -10,21 +10,23 @@ body {
     font-smooth: always;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    display: flex;
+    /* display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
   }
 
-section{transform: scale(60%);}
+.detalle { 
+    transform: scale(60%);
+}
 
-img {
+.imagen {
     max-width: 100%;
     width: 100%;
     display: block;
     object-fit: cover;
     object-position: center center;
-  }
+}
 
 
 .carrousel {
