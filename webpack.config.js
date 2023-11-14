@@ -10,6 +10,7 @@ module.exports = {
     inicioSesión: './JS/iniciar_sesion.js',
     registrar: './JS/Registrar.js',
     carousel: './JS/Carusel.js',
+    catalogo: './JS/catalogo.js',
   },
   output: {
     filename: '[name].bundle.js',
