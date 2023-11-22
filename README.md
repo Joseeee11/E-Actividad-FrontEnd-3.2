@@ -16,18 +16,15 @@
 
 <br>
 <h2>Tecnologías y Herramientas empleadas </h2>
-<p>En este punto lo dividiremos en dos partes: la primera con las herramientas empleadas el <b>Frontend</b> de la página web; y una segunda parte con esas herramientas empleadas para el <b>Backend</b> de la página web.</p>
-<p>Sin embargo, para la edición y creación de ambas partes, empleamos la herramienta de <b><i>Visual Studio Code</i></b>, el cual es un editor de código fuente; y para compartir nuestro proyecto y trabajarlo en equipo, empleamos la herramienta de <b><i>GitHub</i></b> la cual ofrece un servicio de hosting de repositorios almacenados en la nube.</p>
-<h3>Primera Parte "Frontend"</h3>
-<p>Nuestra página web se compone de <b><i>HTML</i></b> y <b><i>CSS</i></b>; sin ningun uso de librerías o semejantes, a excepción de la página dedicada a los catálogos <i>(catalogo.html)</i>, el header y footer del sitio web, pues estas últimas fueron trabajadas con la librería de <b><i>Bootstrap</i></b>, el cual es un framework gratuito y de código abierto para diseños de sitios web.</p>
+Para la edición y creación de ambas partes, empleamos el editor de código <b><i>Visual Studio Code</i></b>, y para compartir nuestro proyecto y trabajarlo en equipo, empleamos la herramienta de <b><i>GitHub</i></b>.</p>
+<h3>Parte "Frontend"</h3>
+<p>Nuestra página web se compone de <b><i>HTML</i></b> y <b><i>CSS</i></b>; sin ningun uso de librerías o semejantes.</p>
 <p>También empleamos <b><i>Webpack</i></b> únicamente para minificar los archivos HTML y CSS, además de evitar problemas con los archivos JS presentados en nuestra página.</p>
-<p>Por otro lado, para organizarnos, idear y planear el diseño del sitio web empleamos la herramienta de <b><i>Figma</i></b> el cual es un instrumento de generación de prototipos principalmente basada en la web. Allí se realizó el diseño de la estructura de diseño base, wireframes y mockups del sitio web.</p>
-<p><b>Link de trabajo compartido en Figma:</b> https://www.figma.com/file/QO9rLfpwws5r5nKSvhypXO/E-Actividad-3.2?type=design&node-id=15-54&mode=design&t=mI1DLnpg6H1ncZyG-0 
+<p>Por otro lado, para planear el diseño del sitio web empleamos la herramienta de <b><i>Figma</i></b>. <b>Link de trabajo compartido en Figma:</b> https://www.figma.com/file/QO9rLfpwws5r5nKSvhypXO/E-Actividad-3.2?type=design&node-id=15-54&mode=design&t=mI1DLnpg6H1ncZyG-0 
 <br></p>
 
-<h3>Segunda Parte "Backend"</h3>
-<p>Principalmente la base de datos <i>(DB)</i> la trabajamos con <b><i>MySQL</i></b>, el cual es un sistema de gestión de bases de datos relacional.</p>
-<p><i>Se encuentra en la carpeta "DB" la llamamos "bd_mcqueen.sql"</i></p>
+<h3>Parte "Backend"</h3>
+<p>La Base de Datos la trabajamos con <b><i>MySQL</i></b>. <i>Esta se encuentra en la carpeta "DB" la llamamos "bd_mcqueen.sql"</i></p>
 <p>Nuestro sitio web trabaja con el entorno de tiempo de ejecución de JavaScript: <b><i>Node js</i></b>; del cual se hizo uso de paquetes que facilitaron la elaboración del programa (aplicación) como son:</p>
 <ul><li>Express-generator  = <b><i>$npm i -g express-generator</i></b></li>
 	<li>Nodemon  =  <b><i>$npm i nodemon</i></b></li>
