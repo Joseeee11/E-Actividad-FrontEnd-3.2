@@ -8,11 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Catalogo - McQueen Concessionaire</title>
     <link rel="icon" href="../imagenes/logo6.png" type="image/x-icon" />
-
-    <link href="../libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="../CSS/catalogo.css" />
 
-    <!-- LINK QUE CARGA LOS ICONOS DE REDES SOCIALES -->
+    <!-- LINK QUE CARGA SOLAMENTE LOS ICONOS DE REDES SOCIALES -->
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
@@ -27,17 +25,16 @@
         <button
           class="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarCollapse"
-          aria-controls="navbarCollapse"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          data-toggle="collapse"
+          data-target=".collapse"
+          data-text="Collapse"
+          id="collapse_but"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse menu" id="navbarCollapse">
           <div class="col-lg-3"></div>
-          <div class="col-lg-3 justify-content-lg-center"></div>
+          <div class="col-lg-3"></div>
 
           <ul class="navbar-nav col-lg-6 justify-content-lg-end">
             <li class="nav-item">
@@ -305,11 +302,9 @@
     </footer>
 
     <!-- CENTER -->
-    <script src="../libs/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Optimización de para webpack, Cristian Rangel -->
     <script src="../JS/catalogo.js"></script>
-<!-- Fin de la Optimización  -->
-
+    <!-- Fin de la Optimización  -->
   </body>
 </html>
