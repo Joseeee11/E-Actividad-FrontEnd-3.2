@@ -1,4 +1,4 @@
-# Actividad 3.2. Proyecto: McQueen Concessionaire (Parte II)
+![image](https://github.com/Joseeee11/E-Actividad-FrontEnd-3.2/assets/115356746/81583d10-6ab5-4269-bd09-6eccbdb9e912)# Actividad 3.2. Proyecto: McQueen Concessionaire (Parte II)
 <p>e-actividad 3.2: Diseño web con HTML & CSS, Usando el diseño responsivo.</p>
 <br>
 <h2> Colaboradores </h2><ul>
@@ -23,9 +23,9 @@ Para la edición y creación de ambas partes, empleamos el editor de código <b>
 <p>Para ejecutar las pagina recomendamos que sea por servidor local para evitar error con el Javascript, hemos utilizado<b> Servor </b>, la instalación y luego ejecución es:</p>
  <ul>
 <li> npm i -g servor </li>
-<li> npm servor dist</li>
+<li> npm servor </li>
 </ul>
-<p>luego por defecto abrira en el puerto <b>8080</b> y luego por preferencia abrir el archivo landing.html</p>
+<p>luego por defecto abrirá en el puerto <b>8080</b> y luego entrar en la carpeta <b>dist</b> y por preferencia abrir el archivo landing.html</p>
 <p>Por otro lado, para planear el diseño del sitio web empleamos la herramienta de <b><i>Figma</i></b>. <b>Link de trabajo compartido en Figma:</b> https://www.figma.com/file/QO9rLfpwws5r5nKSvhypXO/E-Actividad-3.2?type=design&node-id=15-54&mode=design&t=mI1DLnpg6H1ncZyG-0 
 <br></p>
 
