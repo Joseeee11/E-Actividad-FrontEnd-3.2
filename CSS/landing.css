@@ -7,12 +7,6 @@
 @import url("../CSS/footer.css");
 /* Fin de la Optimización */
 
-/*Fuente descargada*/
-@font-face {
-  font-family: "velocidad";
-  src: url("./font/High_Speed.otf");
-}
-
 body {
   /*Igual a cero para quitar el margen predeterminado de la página*/
   margin: 0;

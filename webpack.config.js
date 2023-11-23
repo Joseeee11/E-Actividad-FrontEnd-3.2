@@ -11,6 +11,7 @@ module.exports = {
     registrar: './JS/Registrar.js',
     carousel: './JS/Carusel.js',
     catalogo: './JS/catalogo.js',
+    home: './JS/landing.js'
   },
   output: {
     filename: '[name].bundle.js',
@@ -41,9 +42,9 @@ module.exports = {
       chunks: ['registrar'],
     }),
     new HtmlWebpackPlugin({
-        template: './HTML/01_landing.html',
-        filename: '01_landing.html',
-        chunks: ['01_landing'],
+        template: './HTML/landing.html',
+        filename: 'landing.html',
+        chunks: ['landing'],
     }),
     new HtmlWebpackPlugin({
         template: './HTML/Carro.html',
