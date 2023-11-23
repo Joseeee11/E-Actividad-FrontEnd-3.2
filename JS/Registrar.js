@@ -1,5 +1,5 @@
+// import '../CSS/InicioSesiónMain.css';
 // envió de formulario con x-www-form-urlencoded 
-import '../CSS/InicioSesiónMain.css';
 document.getElementById('button_submit').addEventListener('click', function (formulario) {
     formulario.preventDefault();
 

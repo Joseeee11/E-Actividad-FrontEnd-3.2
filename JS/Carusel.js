@@ -1,5 +1,5 @@
-import '../CSS/Carrostyle.css'
-import '../CSS/StylesCarusel.css'
+// import '../CSS/Carrostyle.css'
+// import '../CSS/StylesCarusel.css'
 
 'use strict'
 

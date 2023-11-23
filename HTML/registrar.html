@@ -6,6 +6,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../imagenes/logo6.png" type="image/x-icon" />
+    <!-- LINK QUE CARGA SOLAMENTE LOS ICONOS DE REDES SOCIALES -->
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
@@ -13,45 +14,6 @@
     <link rel="stylesheet" type="text/css" href="../CSS/InicioSesiónMain.css" />
     <title>Registrarse</title>
   </head>
-  <!-- header hecho por el compañero Javier Olivar -->
-  <header class="navbar navbar-expand-md fixed-top bg-light">
-    <nav class="container-fluid">
-      <img src="../imagenes/logo3.png" class="logo" alt="" />
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target=".collapse"
-        data-text="Collapse"
-        id="collapse_but"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse menu" id="navbarCollapse">
-        <div class="col-lg-3"></div>
-        <div class="col-lg-3"></div>
-
-        <ul class="navbar-nav col-lg-6 justify-content-lg-end">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="./01_landing.html">
-              Home
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./catalogo.html">Vehículos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contactos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./InicioSesión.html">Iniciar Sesión</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <!--BARRA DE NAVEGACION -->
-
   <body>
     <header class="navbar navbar-expand-md fixed-top bg-light">
       <nav class="container-fluid">
@@ -59,17 +21,16 @@
         <button
           class="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarCollapse"
-          aria-controls="navbarCollapse"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          data-toggle="collapse"
+          data-target=".collapse"
+          data-text="Collapse"
+          id="collapse_but"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse menu" id="navbarCollapse">
           <div class="col-lg-3"></div>
-          <div class="col-lg-3 justify-content-lg-center"></div>
+          <div class="col-lg-3"></div>
 
           <ul class="navbar-nav col-lg-6 justify-content-lg-end">
             <li class="nav-item">
@@ -203,6 +164,8 @@
         McQueen Concessionaire © 2023 | Todos los derechos reservados.
       </p>
     </footer>
+    <!-- script -->
+    <script src="../JS/nav.js"></script>
     <script src="../JS/Registrar.js"></script>
   </body>
 </html>
