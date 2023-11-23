@@ -20,6 +20,12 @@ Para la edición y creación de ambas partes, empleamos el editor de código <b>
 <h3>Parte "Frontend"</h3>
 <p>Nuestra página web se compone de <b><i>HTML</i></b> y <b><i>CSS</i></b>; sin ningun uso de librerías o semejantes.</p>
 <p>También empleamos <b><i>Webpack</i></b> únicamente para minificar los archivos HTML y CSS, además de evitar problemas con los archivos JS presentados en nuestra página.</p>
+<p>Para ejecutar las pagina recomendamos que sea por servidor local para evitar error con el Javascript, hemos utilizado<b> Servor </b>, la instalación y luego ejecución es:</p>
+ <ul>
+<li> npm i -g servor </li>
+<li> npm servor dist</li>
+</ul>
+<p>luego por defecto abrira en el puerto <b>8080</b> y luego por preferencia abrir el archivo landing.html</p>
 <p>Por otro lado, para planear el diseño del sitio web empleamos la herramienta de <b><i>Figma</i></b>. <b>Link de trabajo compartido en Figma:</b> https://www.figma.com/file/QO9rLfpwws5r5nKSvhypXO/E-Actividad-3.2?type=design&node-id=15-54&mode=design&t=mI1DLnpg6H1ncZyG-0 
 <br></p>
 
